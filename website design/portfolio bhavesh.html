@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        body {
+
+            background-color: #262525;
+        }
+
+
+        :root {
+            --primary-font-color: #2eacf5;
+            --bg-secondary-color: #262525;
+        }
+
+        h1 {
+            color: var(--primary-font-color);
+        }
+
+        video {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .portfolio-container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+        }
+
+        .navlist li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3rem;
+            height: 15vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+        }
+
+        .navlist li {
+            text-transform: uppercase;
+            list-style: none;
+        }
+
+        .left,
+        .right {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .left {
+            background-color: var(--bg-secondary-color);
+
+            width: 70%;
+            padding-left: 3rem;
+
+        }
+
+        .right {
+            background: #3877ff;
+            width: 30%;
+            background: linear-gradient(#262525 18%, #3877ff);
+        }
+
+        .icon .fa-brands {
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+
+
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon .fa-brands:hover {
+            cursor: pointer;
+            background: linear-gradient(white, aqua);
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contect {
+            margin-left: 40px;
+        }
+
+        .contect h2 {
+            font-size: 1.5rem;
+
+        }
+
+        .contect h1 {
+            font-size: 50px;
+            color: #2eacf5;
+            margin-top: 10px;
+
+        }
+
+        .intro span {
+            color: #2eacf5;
+
+        }
+
+        .intro {
+            color: white;
+        }
+
+        .detail {
+            color: white;
+            font-size: 24px;
+            max-width: 80%;
+            margin: 25px 0 50px 0;
+            line-height: 30px;
+
+        }
+
+        .btn button {
+            border: 1px solid #2eacf5;
+            font-size: 24px;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 400ms
+        }
+
+        button:nth-child(1) {
+
+            background-color: #2eacf5;
+        }
+
+        button:nth-child(2) {
+            background-color: transparent;
+            color: #2eacf5;
+            margin-left: 40px;
+        }
+
+        button:nth-child(1):hover {
+            color: #2eacf5;
+
+            background-color: transparent;
+
+        }
+
+        button:nth-child(2):hover {
+            color: black;
+            background-color: #2eacf5;
+        }
+
+        .design .circle {
+            /* aspect-ratio: 1; */
+            position: absolute;
+            border-radius: 50%;
+            top: 20%;
+            left: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .circle:nth-child(1) {
+            background-color: #262525;
+            width: 540px;
+            height: 540px;
+            position: absolute;
+            top: 100px;
+            left: 700px;
+        }
+
+        .circle:nth-child(2) {
+            position: absolute;
+            top: 155px;
+            left: 755px;
+            background-color: white;
+            width: 430px;
+            height: 430px;
+            display: flex;
+            box-sizing: border-box;
+            background-image: url(bhavesh\ 1.png);
+            background-size: cover;
+            background-position: top;
+
+        }
+
+        .langauge .html {
+
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .langauge .html .icon-1 {
+            text-align: center;
+        }
+
+        .langauge .html .icon-2 {
+            text-align: center;
+        }
+
+        .langauge .html .icon-3 {
+            text-align: center;
+        }
+
+        .langauge .html span {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.9;
+
+        }
+
+        main i {
+            margin-bottom: 8%;
+
+        }
+
+        .langauge {
+            background-color: #262525;
+        }
+
+        .langauge .html .icon-1 {
+            border: 2px solid black;
+            margin-top: 70px;
+            border-radius: 12px;
+            background-color: #2eacf5;
+            transition: all 400ms;
+            padding: 2%;
+            font-size: 18px;
+        }
+
+        .langauge .html .icon-2 {
+            border: 2px solid black;
+            margin-top: 70px;
+            border-radius: 12px;
+            background-color: #2eacf5;
+            transition: all 400ms;
+            padding: 2%;
+            font-size: 18px;
+        }
+
+        .langauge .html .icon-3 {
+            border: 2px solid black;
+            margin-top: 70px;
+            border-radius: 12px;
+            background-color: #2eacf5;
+            transition: all 400ms;
+            padding: 2%;
+            font-size: 18px;
+        }
+
+        .langauge .html .icon-1:hover {
+            background-color: transparent;
+            color: #2eacf5;
+            border: 2px solid #2eacf5;
+
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            box-shadow: rgb(34, 184, 243) 0px 54px 55px, rgb(34, 184, 243) 0px -12px 30px, rgb(34, 184, 243) 0px 4px 6px, rgb(34, 184, 243) 0px 12px 13px, rgb(34, 184, 243) 0px -3px 5px;
+        }
+
+        .langauge .html .icon-2:hover {
+            background-color: transparent;
+            color: #2eacf5;
+            border: 2px solid #2eacf5;
+
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            box-shadow: rgb(34, 184, 243) 0px 54px 55px, rgb(34, 184, 243) 0px -12px 30px, rgb(34, 184, 243) 0px 4px 6px, rgb(34, 184, 243) 0px 12px 13px, rgb(34, 184, 243) 0px -3px 5px;
+        }
+
+        .langauge .html .icon-3:hover {
+            background-color: transparent;
+            color: #2eacf5;
+            border: 2px solid #2eacf5;
+
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            box-shadow: rgb(34, 184, 243) 0px 54px 55px, rgb(34, 184, 243) 0px -12px 30px, rgb(34, 184, 243) 0px 4px 6px, rgb(34, 184, 243) 0px 12px 13px, rgb(34, 184, 243) 0px -3px 5px;
+        }
+
+        .progress-1 {
+            margin-top: 10%;
+            width: 80%;
+            max-width: 60%;
+            margin-left: 15px;
+            justify-content: space-between;
+
+
+        }
+
+        .progress-1 span {
+            color: white;
+            margin: px;
+            font-size: 25px;
+            padding: px;
+
+        }
+
+        .progress-1 span:hover {
+            color: #2eacf5;
+
+
+        }
+
+        .progress-1 .progress {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            max-height: 10px;
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+            box-shadow: rgb(34, 184, 243) 0px 3px 12px;
+        }
+
+        .skill {
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 9%;
+        }
+
+        .skill .technical {
+            border: 1px solid;
+            padding: 20px;
+            color: #2eacf5;
+            transition: all 500ms;
+            border-radius: 16px;
+            /* background-image: linear-gradient(#2eacf5, #262525); */
+        }
+
+        .skill .technical:hover {
+            border: 1px solid;
+            color: black;
+            /* color: #2eacf5; */
+            background-image: linear-gradient(#262525, #2eacf5);
+            /* scale: 1; */
+            transform: translatey(-30px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+
+        }
+
+        .skill .communication {
+            border: 1px solid;
+            padding: 20px;
+            color: #2eacf5;
+            transition: all 500ms;
+            border-radius: 16px;
+            /* background-image: linear-gradient(#2eacf5, #262525); */
+        }
+
+        .skill .communication:hover {
+            border: 1px solid;
+            color: black;
+            /* color: #2eacf5; */
+            background-image: linear-gradient(#262525, #2eacf5);
+            background-color: #2eacf5;
+            /* scale: 1; */
+            transform: translatey(-30px);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+
+        }
+
+ 
+
+        .skill li {
+            list-style: none;
+            font-size: 24px;
+            margin-top: 4px;
+
+        }
+
+        .skill h2 {
+            margin-bottom: 40px;
+            color: rgb(0, 255, 255);
+            font-weight: 600;
+
+        }
+
+        .main-card {
+            display: flex;
+
+        }
+
+        .card {
+            margin-left: 100px;
+            margin-top: 150px;
+
+        }
+
+        .my-skill {
+
+            text-align: center;
+            margin-top: 100px;
+            border: 2px solid #2eacf5;
+            margin-right: 42%;
+            margin-left: 42%;
+            padding: 7px;
+            border-radius: 20px;
+            transition: 500ms;
+
+        }
+
+        .my-skill:hover {
+            color: var(--bg-secondary-color);
+            background-color: #2eacf5;
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+
+        }
+
+        .cource {
+            background-color: var(--bg-secondary-color);
+            /* padding-top: 80px; */
+
+        }
+
+
+        .cource p {
+            color: white;
+        }
+
+
+        .cource img {
+
+            height: 100px;
+        }
+
+        .cource {
+
+            display: flex;
+            justify-content: space-evenly;
+            gap: 60px;
+            text-align: center;
+            flex-direction: row;
+
+        }
+
+        .cource .microsoft-world,
+        .excel,
+        .power-point {
+
+            width: 22%;
+            border: 1px solid white;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: #3b3939;
+
+        }
+
+        .cource .power-point:hover {
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+
+
+        }
+
+        .cource .microsoft-world:hover {
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+        }
+
+        .cource .excel:hover {
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+
+        }
+
+
+        .cource p {
+            margin-top: 30px;
+            font-size: 20px;
+
+
+
+        }
+
+        .cource a {
+
+            text-decoration: none;
+            font-size: 24px;
+            color: black;
+            background-color: var(--primary-font-color);
+            padding: 15px;
+            margin-top: 50px;
+            border-radius: 20px;
+            transition: 400ms;
+
+
+        }
+
+        .cource a:hover {
+            background-color: transparent;
+            color: var(--primary-font-color);
+            border: 1px solid #2eacf5;
+
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+
+        }
+
+        .ccc {
+            background-color: var(--bg-secondary-color);
+            margin-top: 11%;
+            color: var(--primary-font-color);
+            text-decoration: none;
+            text-align: center;
+            border: 2px solid;
+            padding: 15px;
+            margin-left: 42%;
+            margin-right: 42%;
+            font-size: 30px;
+            border-radius: 19px;
+            margin-bottom: 100px;
+            transition: 500ms;
+        }
+
+        .ccc:hover {
+            background-color: #2eacf5;
+            box-shadow: rgb(28, 187, 250) 0px 50px 100px -20px;
+            color: var(--bg-secondary-color);
+
+        }
+
+        .description {
+
+            color: white;
+            margin-left: 10%;
+        }
+
+        .goal {
+            display: flex;
+            margin-top: 9%;
+        }
+
+        .goal .description {
+            margin-top: 11%;
+            /* margin-top: 50px; */
+
+        }
+        .description h2{
+color: var(--primary-font-color);
+font-weight: 600;
+font-size: 45px;
+
+        }
+        .description h3{
+color: #3877ff;
+margin-top: 20px;
+
+        }
+        .description p{
+max-width:80%;
+            color: white;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        .back{
+margin-top: 8%;
+margin-left: 41%;
+background-color: #2eacf5;
+/* padding: 20px; */
+font-size: 25px;
+height: 60px;
+width: 260px;
+
+
+
+border-radius: 19px;
+
+}
+        hr{
+            color: white;
+            margin-top: 8%;
+        }
+
+        footer{
+
+margin-top: 5%;
+
+
+
+        }
+
+        footer .using{
+
+            color: white;
+        }
+footer .using{
+
+    display: flex;
+    justify-content: center;
+    
+}
+ 
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="portfolio-container">
+            <ul class="navlist">
+                <li><a href="#">home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">project</a></li>
+                <li><a href="#">service</a></li>
+            </ul>
+
+            <div class="left">
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="contect">
+                    <p class="intro"> HI I'AM <span>BHAVESH BAROLIYA</span></p>
+                    <h1>website designer</h1>
+                    <p class="detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas doloribus alias,
+                        molestias, quasi nisi
+                        reiciendis, atque praesentium quisquam
+                        laboriosam laudantium soluta repellat!</p>
+                    <div class="btn">
+                        <button>hire me</button>
+                        <button>view project</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right"></div>
+
+            <div class="design">
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="langauge">
+            <div class="html">
+                <div class="icon-1">
+                    <i class="fa-brands fa-html5"> </i><br>
+                    <span>I like Html very well <br>I know all the tag information in html <br>
+                        HTML is very important for web designers <br></span>
+
+                </div>
+                <div class="icon-2">
+                    <i class="fa-brands fa-css3"> </i><br>
+                    <span>i like css <br> css is very powerful for design (style). <br>
+                        I can create a website with html and css</span>
+
+                </div>
+                <div class="icon-3">
+                    <i class="fa-brands fa-js"> </i><br>
+                    <span> i like JavaScript <br> I use JavaScript to make the website look great <br> JavaScript is
+                        important
+                        for websitelook great </span>
+
+
+                </div>
+            </div>
+            <div class="main-card">
+                <div class="progress-1">
+
+                    <span> HTML</span>
+                    <div class="progress" role="progressbar" aria-label="imfo example" aria-valuenow="90"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-info" style="width: 90%"></div>
+                    </div>
+                    <span> CSS</span>
+                    <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-info" style="width: 80%"></div>
+                    </div>
+                    <span> JavaScript</span>
+                    <div class="progress" role="progressbar" aria-label="infoexample" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-info" style="width: 50%"></div>
+                    </div>
+                    <span>Bootstrap</span>
+                    <div class="progress" role="progressbar" aria-label="infoexample" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-info" style="width: 60%"></div>
+
+                    </div>
+
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <h1 class="my-skill"> My Skill</h1>
+            <div class="skill">
+                <div class="technical">
+                    <h2>technical skill</h2>
+                    <ul>
+                        <li>I can create a website with <br> html and css</li>
+                        <li>I can design the website well</li>
+                        <li> I know the HTML</li>
+                        <li> I know the CSS</li>
+                        <li> I know the JavaScript</li>
+                        <li> I know the Bootstrap</li>
+                        <li> I know the TELWIND</li>
+
+                    </ul>
+                </div>
+                <div class="communication">
+                    <h2>communication skills</h2>
+                    <ul>
+                        <li>I can speak Gujarati expert</li>
+                        <li>I can speak hindi expert</li>
+                        <li>I can read and explain english <br> langauge</li>
+                        <li>I can't speak English</li>
+                        <li>i can speak english langauge <br> in my introduction</li>
+                    </ul>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ccc">My CCC</div>
+        <!-- <h1 class="ccc">My CCC </h1> -->
+        <div class="cource">
+
+
+            <div class="microsoft-world">
+                <img src="Microsoft_Office_Word_(2019–present).svg.png" alt="">
+                <p>Microsoft Word is a word processing program that allows for the creation of both simple and complex
+                    documents. microsoft-world is best for writting style </p>
+
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.microsoft.office.word&hl=en_IN">Microsoft-World</a>
+
+            </div>
+
+            <div class="excel">
+                <img src="Microsoft_Office_Excel_(2019–present).svg.png" alt="">
+                <p class="para">Cash conversion cycle (CCC) represents the period between paying to suppliers for
+                    delivering raw
+                    materials and collecting cash from the sale of finished goods.</p>
+
+                <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel&hl=en_IN">Excel</a>
+
+            </div>
+
+            <div class="power-point">
+                <img src="powerpoint-5963677_1280.webp" alt="">
+                <p> Microsoft PowerPoint is a powerful slide show presentation program. It is a standard component of
+                    the
+                    company's Microsoft Office suite software, power-point </p>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint&hl=en_IN">Power-Point</a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="goal">
+
+
+            <div class="description">
+
+                <h2>My CCC complate </h2>
+                <h3>in the 2023</h3>
+                <p>I have learned Microsoft World, Excel and Power Point in CCC.
+                    I got CCC certificate in 2023
+                </p>
+                <p> now I move on to website design. I have learned a lot in website design and am still trying to
+                    learn more. I will try to learn as much as possible and improve my technical and communication skills.</p>
+            </div>
+
+            <div class="image">
+
+                <img src="WhatsApp_Image_2024-12-17_at_16.20.32-removebg-preview.png" alt="">
+            </div>
+        </div>
+
+    </main>
+    <button class="back">back to home</button>
+    <hr>
+    
+<footer>
+<div class="using">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+
+</div>
+
+
+
+</footer>
+
+</body>
+
+</html>

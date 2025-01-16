@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* .box{
+
+
+    height: 300px;
+    width: 300px;
+border: 1px solid black;
+margin: 50px auto;
+background-color: bisque;
+border-radius: 12px;
+} */
+
+
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+
+<script>
+//   let box = document.getElementsByClassName('box')[0];
+// box.style.color = 'red';
+
+let box = document.getElementsByClassName('box')[0];
+
+// box.style.color = 'red';
+// box.style.backgroundColor = 'teal';
+// box.style.margin = '50px auto';
+// box.style.borderRadius = '12px';
+// box.style.height = '300px';
+// box.style.width = '300px';
+
+// box.style.border = '2px solid black';
+
+// box2.style.cssText =
+// 'height:300px; width:300px; border-radius:12px; background-color:teal; margin:50px auto;';
+
+// box.style.cssText = 'height:300px; width:300px; border-radius:12px; background-color:teal; margin:50px auto;';
+box.style.cssText = 'height:300px; width:300px; border:1px solid black; border-radius:12px; background-color:teal; margin:50px auto;';
+
+
+// const boxStyle = window.getComputedStyle(box);
+// const boxStyle = window.getComputedStyle(box);
+
+const boxStyle = window.getComputedStyle(box);
+
+console.log(boxStyle.height)
+console.log(boxStyle.width)
+console.log(boxStyle.border)
+console.log(boxStyle.background)
+
+</script>
+
+</body>
+
+</html>
