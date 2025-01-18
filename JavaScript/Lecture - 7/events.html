@@ -59,9 +59,21 @@
         box.style.backgroundColor = 'teal';
       };
 
+      box2.onmouseenter = () => {
+        console.log('Mouse entered in box');
+        box2.style.backgroundColor = 'red';
+      }
+
       box.onmouseleave = () => {
         console.log('Mouse left the Box');
         box.style.backgroundColor = 'tomato';
+      };
+
+      box2.onmouseleave = () => {
+console.log('mouse left the box');
+box2.style.backgroundColor = 'teal';
+
+
       };
 
       //   userName.onchange = () => {
