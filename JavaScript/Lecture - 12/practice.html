@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    input{
+/* width: 300px; */
+margin: 50px auto;
+padding: 8px 20px;
+font-size: 20px;
+outline: none;
+
+    }
+    input:hover{
+        background-color: rgb(216, 216, 255);
+    }
+    input:focus{
+background-color: rgb(181, 181, 255);
+
+    }
+    button{
+border-radius: 6px;
+        background-color: green;
+        padding: 8px 20px;
+        font-size: 20px;
+        color: white;
+        transition: 300ms;
+        cursor: pointer;
+    }
+
+    button:hover{
+    
+    background: transparent;
+border: 2px solid green;
+color: green;
+    
+    }
+</style>
+<body>
+
+    
+    <input type="text">
+    
+    
+    <button onclick="getInputValue()"> 
+        submit
+    </button>
+    <div class="message">
+    </div>
+
+    <script>
+        
+
+ var inp = document.getElementsByTagName('input')[0]; 
+const msg=document.querySelector('.message')
+
+ function getInputValue(){
+     let age=inp.value;
+     console.log(age);
+     if (age >= 18) {
+     //   greeting = "congrats! you can get licence";
+    //    alert("congrats! you can get licence");
+       msg.innerText="congrats! you can get licence";
+    msg.style.color='green'
+
+     } else {
+     //   greeting = "sorry! you can not get licence";
+    //    alert( "sorry! you can not get licence");
+    msg.innerText="sorry! you can not get licence";
+    msg.style.color='red'
+     }
+ }
+
+
+
+
+
+        // switch (day) {
+        //         case 'sun':
+        //           console.log('Sunday');
+        //           break;
+        //         case 'mon':
+        //           console.log('Monday');
+        //           break;
+        //         case 'tue':
+        //           console.log('Tuesday');
+        //           break;
+        //         case 'wed':
+        //           console.log('Wednesday');
+        //           break;
+        //         case 'thu':
+        //           console.log('Thursday');
+        //           break;
+        //         case 'fri':
+        //           console.log('Friday');
+        //           break;
+        //         case 'sat':
+        //           console.log('Saturday');
+        //           break;
+        //         default:
+        //           console.log('Wrong Input');
+        //       }
+
+        // day = 'sun';
+
+        // switch (day) {
+
+        //     case 'sun':
+        //         console.log('sunday');
+        //         break;
+
+        //     case 'mon':
+        //         console.log('monday');
+        //         break;
+
+        //     case 'tue':
+        //         console.log('tuesday');
+        //         break;
+
+        //     case 'wed':
+        //         console.log('wednsday');
+        //         break;
+
+        //     case 'thu':
+        //         console.log('thusday');
+        //         break;
+
+        //     case 'fri':
+        //         console.log('friday')
+        //         break;
+
+        //     case 'sat':
+        //         console.log('satarday')
+        //         break;
+
+        //     default:
+        //         console.log('Wrong input')
+        // }
+
+
+    </script>
+
+</body>
+
+</html>
