@@ -95,11 +95,10 @@ if (operation == 'c') {
 num1.value = '';
 num2.value = '';
 result.value = '';
+}else{
+ result.value = eval(`${num1.value}${operation}${num2.value}`);
+}
 } 
-else{
-    result.value = eval(`${num1.value}${operation}${num2.value}`);
-}
-}
 
 
 </script>
