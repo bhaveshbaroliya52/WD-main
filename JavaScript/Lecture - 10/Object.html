@@ -7,11 +7,11 @@
   </head>
   <body>
     <script>
-      //               name   age   city   course  education
+      //                 name  age   city    course  education
       personDetails_1 = ['Jay', 23, 'Rajkot', 'WD', 'BCA'];
       personDetails_2 = ['AJay', 26, 'Baroda', 'SE', 'BA'];
 
-      personDetails_1.unshift('Gujrat');
+      // personDetails_1.unshift('Gujrat');
 
       console.log(personDetails_1);
       console.log('Name: ', personDetails_1[0]);
@@ -23,11 +23,11 @@
       let num = 10;
 
       personDetails = {
-        age: 23,
+        age: 21,
         city: 'Rajkot',
         course: 'WD',
         education: 'BCA',
-        name: 'Jay',
+        name: 'bhavesh',
       };
 
       console.log(personDetails);
@@ -35,8 +35,8 @@
       // DOt (.) notation
       console.log(personDetails.name);
 
-      //   bracket ["key_name"] notation
-      console.log(personDetails['name']);
+        // bracket ["key_name"] notation
+      console.log(personDetails['age']);
 
       function printHello() {
         console.log('Hello from function');
@@ -53,8 +53,8 @@
         array: ['Jay', 23, 'Rajkot', 'WD', 'BCA'],
         obj_variable: personDetails,
         object: {
-          age: 45,
-          city: 'Rajkot',
+        age: 45,
+        city: 'Rajkot',
         },
         function_name: printHello,
         function_definition: () => {
@@ -70,11 +70,11 @@
       console.log(obj.obj_variable.name);
       console.log(obj.function_name);
       console.log(obj.function_definition);
-      console.log(obj.function_definition());
+      // console.log(obj.function_definition());
 
       //   Object methods
-
-      //   returns array of keys
+      
+      //   returns array of keys  
       console.log(Object.keys(obj));
 
       //   returns array of values
