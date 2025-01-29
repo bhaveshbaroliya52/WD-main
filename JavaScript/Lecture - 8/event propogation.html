@@ -46,22 +46,12 @@
       const parentEle = document.querySelector('.parent');
       const childEle = document.querySelector('.child');
       const subChildEle = document.querySelector('.sub-child');
-
       const htmlELe = document.querySelector('html');
 
       // event propagation / event bubbling, whenever an event happens it will notify all of its parents about that event, this is called event propagation (Applied by default) (Bottom to top)
 
-      //   subChildEle.addEventListener('click', (e) => {
-      //     console.log('subChildEle Clicked');
-
-      //     // event.stopPropagation(), it is used to stop propagation
-
-      //     // e.stopPropagation();
-      //   });
-
-      //   childEle.addEventListener('click', () => {
-      //     console.log('childEle Clicked');
-      //   });
+    
+ 
 
       //   parentEle.addEventListener('click', () => {
       //     console.log('parentEle Clicked');
@@ -77,13 +67,6 @@
 
       //   event capturing / event trickling, whenever an event happens on any of the parent we may choose to notify all of its parent, then it is called event capturing (Top to Bottom ) (optional, add true as third parameter in addEventListener to enable this)
 
-      subChildEle.addEventListener(
-        'click',
-        (e) => {
-          console.log('subChildEle Clicked');
-        },
-        true
-        );
 
       childEle.addEventListener(
         'click',
@@ -93,31 +76,30 @@
         true
       );
 
-      parentEle.addEventListener(
-        'click',
-        () => {
-          console.log('parentEle Clicked');
-        },
-        true
-      );
+      // parentEle.addEventListener(
+      //   'click',
+      //   () => {
+      //     console.log('parentEle Clicked');
+      //   },
+      //   true
+      // );
 
-      document.body.addEventListener(
-        'click',
-        () => {
-          console.log('Body Clicked');
-        },
-        true
-      );
+      // document.body.addEventListener(
+      //   'click',
+      //   () => {
+      //     console.log('Body Clicked');
+      //   },
+      //   true
+      // );
 
-      htmlELe.addEventListener(
-        'click',
-        () => {
-          console.log('HTML Clicked');
-        },
-        true
-      );
+      // htmlELe.addEventListener(
+      //   'click',
+      //   () => {
+      //     console.log('HTML Clicked');
+      //   },
+      //   true
+      // );
 
-        
     </script>
   
 <script>

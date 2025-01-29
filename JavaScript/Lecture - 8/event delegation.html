@@ -45,30 +45,43 @@
     </div>
     <!-- event delegation, it is concept where we delegate (to pass our work to someone else) event handling to some any of the parent, it is used to handle dynamic element events  -->
     <script>
-      const child1Ele = document.querySelector('.child:nth-child(1)');
-      const parentEle = document.querySelector('.parent');
-      //   console.log(child1Ele);
+      // const child1Ele = document.querySelector('.child:nth-child(1)');
+      // const parentEle = document.querySelector('.parent');
+      // //   console.log(child1Ele);
 
-      //   child1Ele.onclick = () => {
-      //     console.log('Child 1 clicked');
-      //   };
+      // //   child1Ele.onclick = () => {
+      // //     console.log('Child 1 clicked');
+      // //   };
 
-      parentEle.onclick = (e) => {
-        // console.log('Parent clicked');
-        // console.log(e);
-        console.log(e.target);
+      // parentEle.onclick = (e) => {
+      //   // console.log('Parent clicked');
+      //   // console.log(e);
+      //   console.log(e.target);
 
-        // template literal, it is used to include variable value as a string
+      //   // template literal, it is used to include variable value as a string
 
-        console.log(`child ${e.target.innerText} clicked`);
-        e.target.style.backgroundColor = 'tomato';
-      };
+      //   console.log(`child ${e.target.innerText} clicked`);
+      //   e.target.style.backgroundColor = 'tomato';
+      // };
     </script>
 
 
 <script>
- 
+ const child1Ele = document.querySelector('.child:nth-child(1)');
+ const parentEle = document.querySelector('.parent');
 
+  // child1Ele.onclick = () => {
+  //   console.log('child 1 clicked');
+  // };
+
+  parentEle.onclick = (e) => {
+
+    console.log(e.target.innerText);
+  let ele = e.target
+  ele.style.backgroundColor = 'green'
+  }
+
+  
 </script>
   </body>
 </html>
