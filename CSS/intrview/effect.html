@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    
+<style>
+
+
+header .heading {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  /* position: fixed; */
+  align-items: center;
+  height: 90px;
+  /* width: 100%; */
+  /* color: var(--simple--color); */
+  top: 0;
+  left: 0;
+}
+  
+.heading .menu a:hover::before{
+        width: 100%;
+      
+      }
+      .heading .menu a::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        bottom: -10px;
+        left: 0;
+        width: 0;
+        background-color: orange;
+        border-radius: 1px;
+        transition: all 300ms;
+        
+      }
+
+
+      .heading .menu a{
+text-decoration: none;
+color: black;
+      }
+
+      .heading .menu a {
+  margin-left: 24px;
+  font-size: 20px;
+  position: relative;
+  transition: all 1s;
+}
+
+    </style>
+    <body>
+
+
+ <header>
+<div class="heading">
+<div class="menu">
+<a href="#">DAshbord</a>
+<a href="#">DAshbord</a>
+<a href="#">DAshbord</a>
+<a href="#">DAshbord</a>
+
+</div>
+</div>
+</header>
+
+    </body>
+
+</html>
