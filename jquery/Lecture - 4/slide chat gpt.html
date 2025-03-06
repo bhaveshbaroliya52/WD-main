@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * { text-align: center; font-family: Arial, sans-serif; }
+        .slider-container {
+            width: 600px;
+            height: 350px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            display: none;
+            object-fit: cover;
+        }
+        img.active { display: block; }
+        
+        /* Button Styles */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        #prev { left: 10px; }
+        #next { right: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <img src="images/slide-1.jpg" class="active">
+        <img src="images/slide-2.jpg">
+        <img src="images/slide-3.jpg">
+    
+        <!-- Buttons inside Image -->
+        <button class="btn" id="prev">❮</button>
+        <button class="btn" id="next">❯</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let currentIndex = 0;
+            let images = $(".slider-container img");
+            let totalImages = images.length;
+
+            $("#next").click(function () {
+                images.eq(currentIndex).removeClass("active");
+                currentIndex = (currentIndex + 1) % totalImages;
+                images.eq(currentIndex).addClass("active");
+            });
+
+            $("#prev").click(function () {
+                images.eq(currentIndex).removeClass("active");
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                images.eq(currentIndex).addClass("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
